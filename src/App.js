@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import Signin from './pages/Signin';
 import NotFound from './pages/NotFound';
 import InstantPlay from './pages/InstantPlay';
@@ -7,42 +7,49 @@ import LatestReleases from './pages/LatestReleases';
 import ApprovedApplications from './pages/ApprovedApplications';
 import ReviewedApplications from './pages/ReviewedApplications'
 import Profile from './pages/Profile';
+import Navbar from './components/Navbar';
 function App() {
   return (
     <div className="min-h-[100vh] flex flex-col justify-between">
       <div>
+        <Navbar />
         <Routes>
           <Route
-            path='/auth/signin'
-            element={ <Signin /> }
+            path='/'
+            element={<Navigate to='/auth/signin' />}
           />
           <Route
+            path='/auth/signin'
+            element={<Signin />}
+          />
+
+          <Route
             path='/instant-play'
-            element={ <InstantPlay /> }
+            element={<InstantPlay />}
           />
           <Route
             path='/latest-releases'
-            element={ <LatestReleases/> }
+            element={<LatestReleases />}
           />
           <Route
             path='/approved-applications'
-            element={ <ApprovedApplications /> }
+            element={<ApprovedApplications />}
           />
           <Route
             path='/reviewed-applications'
-            element={ <ReviewedApplications /> }
+            element={<ReviewedApplications />}
           />
           <Route
             path='/profile'
-            element={ <Profile /> }
+            element={<Profile />}
           />
           <Route
             path='*'
             element={<NotFound />}
           />
-        </Routes>  
+        </Routes>
       </div>
-      
+
       <BottomBar />
     </div>
   );

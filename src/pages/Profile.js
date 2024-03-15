@@ -5,7 +5,7 @@ import { Button } from '@mui/material';
 const Profile = () => {
 
   return (
-    <div className='w-full mt-[50px] flex flex-col items-center'>
+    <div className='w-full mt-[80px] flex flex-col items-center'>
 
       <h1 className='text-2xl font-bold mb-12'>Profile Details</h1>
 

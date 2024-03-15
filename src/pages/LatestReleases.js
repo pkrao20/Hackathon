@@ -31,7 +31,7 @@ const games = [
 
 const LatestReleases = () => {
   return (
-    <div className='w-full flex flex-col items-center justify-center'>
+    <div className='w-full flex flex-col items-center justify-center  mt-[80px]'>
       <h1 className='font-bold text-3xl my-8 text-purple-700'> Latest Releases-- </h1>
 
       <div className='grid grid-cols-1 gap-8'>
