@@ -42,6 +42,7 @@ const BottomBar = () => {
                     </div>
                 ))
             }
+            <div>hello</div>
         </div>
     </div>
   );
